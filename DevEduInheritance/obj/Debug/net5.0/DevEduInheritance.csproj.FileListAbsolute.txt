@@ -1,0 +1,16 @@
+C:\Project\DevEduInheritance\DevEduInheritance\bin\Debug\net5.0\DevEduInheritance.exe
+C:\Project\DevEduInheritance\DevEduInheritance\bin\Debug\net5.0\DevEduInheritance.deps.json
+C:\Project\DevEduInheritance\DevEduInheritance\bin\Debug\net5.0\DevEduInheritance.runtimeconfig.json
+C:\Project\DevEduInheritance\DevEduInheritance\bin\Debug\net5.0\DevEduInheritance.runtimeconfig.dev.json
+C:\Project\DevEduInheritance\DevEduInheritance\bin\Debug\net5.0\DevEduInheritance.dll
+C:\Project\DevEduInheritance\DevEduInheritance\bin\Debug\net5.0\ref\DevEduInheritance.dll
+C:\Project\DevEduInheritance\DevEduInheritance\bin\Debug\net5.0\DevEduInheritance.pdb
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.csproj.AssemblyReference.cache
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.AssemblyInfoInputs.cache
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.AssemblyInfo.cs
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.csproj.CoreCompileInputs.cache
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.dll
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\ref\DevEduInheritance.dll
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.pdb
+C:\Project\DevEduInheritance\DevEduInheritance\obj\Debug\net5.0\DevEduInheritance.genruntimeconfig.cache
