@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Security.Cryptography;
 
-namespace DevEduInheritance
+namespace DevEduInheritance.Inventors
 {
     public class Item
     {
@@ -30,7 +29,24 @@ namespace DevEduInheritance
                 _weight = value;
             }
         }
-        
+
+
+        public string ItemText(ItemType elem)
+        {
+            return elem switch
+            {
+                ItemType.Gloves => "перчатки",
+                ItemType.Head => "шлем",
+                ItemType.Pants => "штаны",
+                ItemType.Potion =>  "зелье",
+                ItemType.Scrolls => "свиток",
+                ItemType.Shield  => "щит",
+                ItemType.Torso => "нагрудник",
+                ItemType.Weapon => "оружие",
+                ItemType.ShoulderPads => "наплечники",
+                _ => throw new Exception("Неизвестный тип монстра")
+            };
+        }
         
         
         public Item(){}

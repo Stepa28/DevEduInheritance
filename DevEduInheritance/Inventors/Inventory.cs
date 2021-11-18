@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DevEduInheritance.Creatures;
 
-namespace DevEduInheritance
+namespace DevEduInheritance.Inventors
 {
-    public class Inventar : IEnumerable
+    public class Inventory : IEnumerable
     {
-        // владелиц
-        
         private int _roominess;
         private LinkedList<Item> _items;
 
-        public int Size { get => _items.Count; }
-        public int Roominess { get => _roominess; }
+        public Humanoid Owner { get; private set; }
+        public int Size => _items.Count;
+        public int Roominess => _roominess;
 
         public void Add(Item item)
         {
@@ -38,13 +38,13 @@ namespace DevEduInheritance
         
         
 
-        public Inventar()
+        public Inventory(Humanoid humanoid)
         {
             _roominess = 10;
             _items = new LinkedList<Item>();
+            Owner = humanoid;
         }
-
-        public Inventar(int roominess) : this()
+        public Inventory(int roominess, Humanoid humanoid) : this(humanoid)
         {
             _roominess = roominess;
         }

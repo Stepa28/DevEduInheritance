@@ -1,14 +1,31 @@
 ﻿namespace DevEduInheritance
 {
     public enum ItemType {
-        head,
-        torso,
-        pants,
-        weapon,
-        gloves,
-        shield,
-        shoulderPads,
-        potion,
-        scrolls 
+        Head,
+        Torso,
+        Pants,
+        Weapon,
+        Gloves,
+        Shield,
+        ShoulderPads,
+        Potion,
+        Scrolls 
     }
+
+    public enum RaceType
+    {
+        Dragon,
+        Orc,
+        Undead,
+        Demon,
+        Mutant,
+        Animal,
+        Mechanism,
+        Human,
+        Elf,
+        Dwarf,
+        Ghost 
+    }
+
+    
 }
