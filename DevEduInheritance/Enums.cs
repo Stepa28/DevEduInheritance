@@ -14,12 +14,9 @@
 
     public enum RaceType
     {
-        Dragon,
         Orc,
         Undead,
-        Demon,
         Mutant,
-        Animal,
         Mechanism,
         Human,
         Elf,
@@ -27,5 +24,12 @@
         Ghost 
     }
 
+    public enum MonsterType
+    {
+        Dragon,
+        Demon,
+        Animal
+        
+    }
     
 }

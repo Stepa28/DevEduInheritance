@@ -27,6 +27,7 @@ namespace DevEduInheritance.Creatures
                 else throw new Exception("Неверное число максимальной атаки");
             }
         }
+        public MonsterType MonsterType { get; set; }
         public string WarCry
         {
             get => _warCry;
@@ -54,6 +55,7 @@ namespace DevEduInheritance.Creatures
             get
             {
                 return $"Имя монстра: {Name}\n" +
+                       $"Тип монстра{MonsterText(MonsterType)}" +
                        $"Текущие здоровье: {Hp}\n" +
                        $"Максимальное здоровье: {MaxHp}\n" +
                        $"Минимальная атака: {MinAttack}\n" +
@@ -61,10 +63,22 @@ namespace DevEduInheritance.Creatures
             }
         }
 
+        public string MonsterText(MonsterType elem)
+        {
+            return elem switch
+            {
+                MonsterType.Dragon => "Дракон",
+                MonsterType.Demon => "Демон",
+                MonsterType.Animal => "Животное",
+                _ => throw new Exception("Неизвестный тип монстра")
+            };
+        }
+
         public Monster() { }
-        public Monster(string name, int minAttack, int maxAttack, string warCry, string dieCry, int maxHp = 500)
+        public Monster(string name, MonsterType monsterType, int minAttack, int maxAttack, string warCry, string dieCry, int maxHp = 500)
         {
             Name = name;
+            MonsterType = monsterType;
             MinAttack = minAttack;
             MaxAttack = maxAttack;
             WarCry = warCry;

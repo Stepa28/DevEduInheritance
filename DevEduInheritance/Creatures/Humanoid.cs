@@ -10,12 +10,9 @@ namespace DevEduInheritance.Creatures
         {
             return elem switch
             {
-                RaceType.Dragon => "Дракон",
                 RaceType.Orc => "Орк",
                 RaceType.Undead => "Нежить",
-                RaceType.Demon => "Демон",
                 RaceType.Mutant => "Мутант",
-                RaceType.Animal => "Животное",
                 RaceType.Mechanism => "Механизм",
                 RaceType.Human => "Человек",
                 RaceType.Elf => "Эльф",
