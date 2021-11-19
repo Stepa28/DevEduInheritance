@@ -3,16 +3,11 @@ using DevEduInheritance.Inventors;
 
 namespace DevEduInheritance.Creatures
 {
-    public class Hero : Humanoid,ICombatan
+    public class Hero : Humanoid, ICombatan
     {
         private Random _rnd = new();
-        public int GetAttack(int bonus)
-        {
-            return _rnd.Next(_minAttack, _maxAttack + 1) + bonus;
-        }
-
-        private int _minAttack;
-        private int _maxAttack;
+        private int    _minAttack;
+        private int    _maxAttack;
 
         public int MinAttack
         {
@@ -25,8 +20,7 @@ namespace DevEduInheritance.Creatures
                     throw new AggregateException("Недоступное значение минимальной атаки");
             }
         }
-
-        public int MaxAttack 
+        public int MaxAttack
         {
             get => _maxAttack;
             set
@@ -38,10 +32,17 @@ namespace DevEduInheritance.Creatures
             }
         }
 
+
+        public int GetAttack(int bonus)
+        {
+            return _rnd.Next(_minAttack, _maxAttack + 1) + bonus;
+        }
+
+
         public Hero() : base() { }
 
-        public Hero(string name, RaceType raceType, int maxHp, int minAttack, int maxAttack) 
-            : base(name, raceType, maxHp)
+        public Hero(string name, RaceType raceType, int maxHp, int intellect, int minAttack, int maxAttack)
+            : base(name, raceType, maxHp, intellect)
         {
             MinAttack = minAttack;
             MaxAttack = maxAttack;

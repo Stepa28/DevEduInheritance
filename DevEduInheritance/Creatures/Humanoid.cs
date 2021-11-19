@@ -6,29 +6,26 @@ namespace DevEduInheritance.Creatures
     public class Humanoid : Creature
     {
         private Random _rnd = new();
-        public string RaceText(RaceType elem)
-        {
-            return elem switch
-            {
-                RaceType.Orc => "Орк",
-                RaceType.Undead => "Нежить",
-                RaceType.Mutant => "Мутант",
-                RaceType.Mechanism => "Механизм",
-                RaceType.Human => "Человек",
-                RaceType.Elf => "Эльф",
-                RaceType.Dwarf => "Дворф",
-                RaceType.Ghost => "Призрак",
-                _ => throw new Exception("Неизвестный тип монстра")
-            };
-        }
-        
+        private bool   _racialPerk;
 
-        private bool _racialPerk; 
-        
-        
-        public RaceType RaceType { get; private set; }
-        public Inventory Inventory { get; set; }
-        
+        public RaceType  RaceType  {get; private set;}
+        public Inventory Inventory {get; set;}
+        public int       Intellect {get; set;}
+
+        public string RaceText =>
+            RaceType switch
+            {
+                RaceType.Orc       => "Орк",
+                RaceType.Undead    => "Нежить",
+                RaceType.Mutant    => "Мутант",
+                RaceType.Mechanism => "Механизм",
+                RaceType.Human     => "Человек",
+                RaceType.Elf       => "Эльф",
+                RaceType.Dwarf     => "Дворф",
+                RaceType.Ghost     => "Призрак",
+                _                  => throw new Exception("Неизвестный тип монстра")
+            };
+
 
         public override void Wounds(int damage)
         {
@@ -37,11 +34,11 @@ namespace DevEduInheritance.Creatures
                 switch (RaceType)
                 {
                     case RaceType.Orc when _racialPerk:
-                        Hp = 1;
+                        Hp          = 1;
                         _racialPerk = false;
                         break;
                     case RaceType.Undead when _racialPerk:
-                        Hp = MaxHp;
+                        Hp          = MaxHp;
                         _racialPerk = false;
                         break;
                     default:
@@ -63,7 +60,7 @@ namespace DevEduInheritance.Creatures
                         Hp -= (int)(damage * 1.1);
                         break;
                     case RaceType.Dwarf:
-                        Hp -= (int) (damage * 0.9);
+                        Hp -= (int)(damage * 0.9);
                         break;
                     default:
                         Hp -= damage;
@@ -72,19 +69,20 @@ namespace DevEduInheritance.Creatures
             }
         }
 
-        
+
         public Humanoid()
         {
             Inventory = new Inventory(this);
         }
-        public Humanoid(string name, RaceType raceType, int maxHp) : this()
+        public Humanoid(string name, RaceType raceType, int maxHp, int intellect) : this()
         {
-            Name = name;
-            RaceType = raceType;
+            Name      = name;
+            RaceType  = raceType;
+            MaxHp     = maxHp;
+            Hp        = maxHp;
+            Intellect = intellect;
             if (raceType == RaceType.Undead || raceType == RaceType.Orc) //особенность рассы
                 _racialPerk = true;
-            MaxHp = maxHp;
-            Hp = maxHp;
         }
     }
 }

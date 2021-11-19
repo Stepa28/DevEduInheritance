@@ -6,9 +6,9 @@ namespace DevEduInheritance.Inventors
     {
         private int _cost;
         private int _weight;
-        
-        public string Name { get; set; }
-        public ItemType ItemType { get; set; }
+
+        public string   Name     {get; set;}
+        public ItemType ItemType {get; set;}
         public int Cost
         {
             get => _cost;
@@ -30,27 +30,23 @@ namespace DevEduInheritance.Inventors
             }
         }
 
-
-        public string ItemText(ItemType elem)
-        {
-            return elem switch
+        public string ItemText =>
+            ItemType switch
             {
-                ItemType.Gloves => "перчатки",
-                ItemType.Head => "шлем",
-                ItemType.Pants => "штаны",
-                ItemType.Potion =>  "зелье",
-                ItemType.Scrolls => "свиток",
-                ItemType.Shield  => "щит",
-                ItemType.Torso => "нагрудник",
-                ItemType.Weapon => "оружие",
+                ItemType.Gloves       => "перчатки",
+                ItemType.Head         => "шлем",
+                ItemType.Pants        => "штаны",
+                ItemType.Potion       => "зелье",
+                ItemType.Scrolls      => "свиток",
+                ItemType.Shield       => "щит",
+                ItemType.Torso        => "нагрудник",
+                ItemType.Weapon       => "оружие",
                 ItemType.ShoulderPads => "наплечники",
-                _ => throw new Exception("Неизвестный тип монстра")
+                _                     => throw new Exception("Неизвестный тип монстра")
             };
-        }
-        
-        
-        public Item(){}
 
+
+        public Item() { }
         public Item(string name, ItemType itemType, int cost, int weight) =>
             (Name, ItemType, Cost, Weight) = (name, itemType, cost, weight);
     }

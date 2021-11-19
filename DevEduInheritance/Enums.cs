@@ -1,6 +1,7 @@
 ﻿namespace DevEduInheritance
 {
-    public enum ItemType {
+    public enum ItemType
+    {
         Head,
         Torso,
         Pants,
@@ -9,7 +10,7 @@
         Shield,
         ShoulderPads,
         Potion,
-        Scrolls 
+        Scrolls
     }
 
     public enum RaceType
@@ -21,7 +22,7 @@
         Human,
         Elf,
         Dwarf,
-        Ghost 
+        Ghost
     }
 
     public enum MonsterType
@@ -29,7 +30,5 @@
         Dragon,
         Demon,
         Animal
-        
     }
-    
 }

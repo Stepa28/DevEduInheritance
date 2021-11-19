@@ -6,7 +6,7 @@ namespace DevEduInheritance.Creatures
     {
         public void Wounds(int damage);
         public int GetAttack(int bonus);
-        public int MinAttack { get; set; }
-        public int MaxAttack { get; set; }
+        public int MinAttack {get; set;}
+        public int MaxAttack {get; set;}
     }
 }

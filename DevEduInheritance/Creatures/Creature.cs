@@ -7,9 +7,8 @@ namespace DevEduInheritance.Creatures
         private int _maxHp;
         private int _hp;
 
-        public string Name { get; set; }
-        public bool IsDie => _hp == 0;
-
+        public string Name  {get; set;}
+        public bool   IsDie => _hp == 0;
         public int Hp
         {
             get => _hp;
@@ -17,7 +16,8 @@ namespace DevEduInheritance.Creatures
             {
                 if ((value <= 500 || value <= MaxHp) && value >= 0) _hp = value;
                 else if (value < 0) _hp = 0;
-                else throw new Exception("Неверное количество здаровья");
+                else
+                    throw new Exception("Неверное количество здаровья");
             }
         }
         public int MaxHp
@@ -29,6 +29,7 @@ namespace DevEduInheritance.Creatures
                 else throw new Exception("Неверное количество максимального здаровья");
             }
         }
+        
 
         public abstract void Wounds(int damage);
     }
