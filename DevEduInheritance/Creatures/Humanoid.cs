@@ -5,10 +5,10 @@ namespace DevEduInheritance.Creatures
 {
     public class Humanoid : Creature
     {
-        private Random _rnd = new();
-        private bool   _racialPerk;
+        private readonly Random _rnd = new();
+        private          bool   _racialPerk;
 
-        public RaceType  RaceType  {get; private set;}
+        public RaceType  RaceType  {get; init;}
         public Inventory Inventory {get; set;}
         public int       Intellect {get; set;}
 
@@ -81,7 +81,7 @@ namespace DevEduInheritance.Creatures
             MaxHp     = maxHp;
             Hp        = maxHp;
             Intellect = intellect;
-            if (raceType == RaceType.Undead || raceType == RaceType.Orc) //особенность рассы
+            if (raceType == RaceType.Undead || raceType == RaceType.Orc) //особенность расы
                 _racialPerk = true;
         }
     }

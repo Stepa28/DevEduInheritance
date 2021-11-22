@@ -11,7 +11,7 @@ namespace DevEduInheritance.Inventors
         private LinkedList<Item> _items;
         
 
-        public Humanoid Owner     {get; private set;}
+        public Humanoid Owner     {get; init;}
         public int      Size      => _items.Count;
         public int      Roominess => _roominess;
         

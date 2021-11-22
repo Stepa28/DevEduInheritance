@@ -1,13 +1,12 @@
 ﻿using System;
-using DevEduInheritance.Inventors;
 
 namespace DevEduInheritance.Creatures
 {
     public class Hero : Humanoid, ICombatan
     {
-        private Random _rnd = new();
-        private int    _minAttack;
-        private int    _maxAttack;
+        private readonly Random _rnd = new();
+        private          int    _minAttack;
+        private          int    _maxAttack;
 
         public int MinAttack
         {
@@ -39,7 +38,7 @@ namespace DevEduInheritance.Creatures
         }
 
 
-        public Hero() : base() { }
+        public Hero() { }
 
         public Hero(string name, RaceType raceType, int maxHp, int intellect, int minAttack, int maxAttack)
             : base(name, raceType, maxHp, intellect)

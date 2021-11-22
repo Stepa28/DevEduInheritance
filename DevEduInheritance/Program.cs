@@ -1,6 +1,4 @@
-﻿
-
-namespace DevEduInheritance
+﻿namespace DevEduInheritance
 {
     class Program
     {

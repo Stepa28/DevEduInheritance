@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DevEduInheritance.Creatures
+﻿namespace DevEduInheritance.Creatures
 {
     public interface ICombatan
     {
