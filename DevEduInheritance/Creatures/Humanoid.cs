@@ -23,7 +23,7 @@ namespace DevEduInheritance.Creatures
                 RaceType.Elf       => "Эльф",
                 RaceType.Dwarf     => "Дворф",
                 RaceType.Ghost     => "Призрак",
-                _                  => throw new Exception("Неизвестный тип монстра")
+                _                  => throw new Exception("Неизвестная раса")
             };
 
 

@@ -42,7 +42,7 @@ namespace DevEduInheritance.Inventors
                 ItemType.Torso        => "нагрудник",
                 ItemType.Weapon       => "оружие",
                 ItemType.ShoulderPads => "наплечники",
-                _                     => throw new Exception("Неизвестный тип монстра")
+                _                     => throw new Exception("Неизвестный тип предмета")
             };
 
 
