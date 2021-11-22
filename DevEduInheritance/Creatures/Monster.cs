@@ -46,14 +46,6 @@ namespace DevEduInheritance.Creatures
                 else throw new Exception("Пустой предсмертный крик");
             }
         }
-        public string GetInfo =>
-            $"Имя монстра: {Name}\n" +
-            $"Тип монстра{MonsterText}" +
-            $"Текущие здоровье: {Hp}\n" +
-            $"Максимальное здоровье: {MaxHp}\n" +
-            $"Минимальная атака: {MinAttack}\n" +
-            $"Максимальная атака: {MaxAttack}\n";
-
         public string MonsterText =>
             MonsterType switch
             {
@@ -78,6 +70,13 @@ namespace DevEduInheritance.Creatures
         }
 
 
+        public override string ToString() =>
+            $"Имя монстра: {Name}\n" +
+            $"Тип монстра{MonsterText}" +
+            $"Текущие здоровье: {Hp}\n" +
+            $"Максимальное здоровье: {MaxHp}\n" +
+            $"Минимальная атака: {MinAttack}\n" +
+            $"Максимальная атака: {MaxAttack}\n";
         public int GetAttack(int bonus)
         {
             Random rnd = new Random();
